@@ -2,7 +2,7 @@
 const translations = {
     zh: {
         title: "個人履歷 - 冒文進",
-        name: "冒文進 (Mao Van Jin)",
+        name: "冒文進 (Mào Văn Tiến)",
         student_id_label: "學號:",
         current_status: "來自越南的留學生，目前就讀亞洲科技大學 (Asia University of Science and Technology) 於台中。",
         hobbies_title: "興趣與愛好",
@@ -20,7 +20,7 @@ const translations = {
     },
     vi: {
         title: "Sơ Yếu Lý Lịch - Mão Văn Tiến",
-        name: "Mão Văn Tiến (Mao Van Jin)",
+        name: "冒文進 (Mào Văn Tiến)",
         student_id_label: "Mã số sinh viên:",
         current_status: "Du học sinh đến từ Việt Nam, hiện đang theo học tại Đại học Khoa học và Công nghệ Châu Á (Asia University of Science and Technology) ở Đài Trung.",
         hobbies_title: "Sở Thích & Hoạt Động",
