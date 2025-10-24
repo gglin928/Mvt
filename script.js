@@ -14,7 +14,7 @@ const translations = {
         about_me_content_1: "我是一個充滿熱情與好奇心的人，喜歡透過藝術和運動來探索世界和表達自我。在異國求學雖然充滿挑戰，但也讓我學會獨立、適應新環境和欣賞不同文化。",
         about_me_content_2: "希望未來能將所學應用於實踐，並持續精進自己的專業技能。我樂於接受新事物，相信積極的態度能帶來無限的可能。",
         gallery_title: "生活點滴",
-        gallery_caption: "這是我的部分生活照片。請將此處的佔位圖片替換成您在越南或台灣的生活照！",
+        gallery_caption: "這是我的部分生活照片。",
         copy_success: "已複製！",
         copy_label: "複製學號"
     },
@@ -32,7 +32,7 @@ const translations = {
         about_me_content_1: "Tôi là một người đầy nhiệt huyết và tò mò, thích khám phá thế giới và thể hiện bản thân qua nghệ thuật và thể thao. Việc học tập ở nước ngoài đầy thử thách nhưng cũng giúp tôi học cách độc lập, thích nghi với môi trường mới và trân trọng các nền văn hóa khác nhau.",
         about_me_content_2: "Tôi hy vọng trong tương lai sẽ áp dụng những kiến thức đã học vào thực tế và tiếp tục trau dồi kỹ năng chuyên môn của mình. Tôi sẵn lòng đón nhận những điều mới mẻ và tin rằng thái độ tích cực có thể mang lại vô vàn khả năng.",
         gallery_title: "Khoảnh Khắc Đời Thường",
-        gallery_caption: "Đây là một số hình ảnh về cuộc sống của tôi. Hãy thay thế các hình ảnh giữ chỗ này bằng ảnh đời thường của bạn ở Việt Nam hoặc Đài Loan!",
+        gallery_caption: "Đây là một số hình ảnh về cuộc sống của tôi.",
         copy_success: "Đã sao chép!",
         copy_label: "Sao chép Mã SV"
     }
