@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="title">個人履歷 - 冒文進</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <button id="theme-toggle" aria-label="切換主題">
+            <i class="fas fa-moon"></i>
+        </button>
+        <select id="lang-select">
+            <option value="zh">中文 (Chinese)</option>
+            <option value="vi">越南文 (Vietnamese)</option>
+        </select>
+    </header>
+
+    <main class="container">
+        <section class="profile-card">
+            <img src="images/profile.jpg" alt="冒文進個人照片" class="profile-photo">
+            <h1 data-i18n="name">冒文進 (Mao Van Jin)</h1>
+            <p class="student-id">
+                <span data-i18n="student_id_label">學號:</span> 
+                <span id="student-id-value">114011145</span> 
+                <button id="copy-id-btn" aria-label="複製學號"><i class="fas fa-copy"></i></button>
+                <span id="copy-message" class="copy-message"></span>
+            </p>
+            <p data-i18n="current_status">來自越南的留學生，目前就讀亞洲科技大學 (Asia University of Science and Technology) 於台中。</p>
+        </section>
+
+        <section class="section">
+            <h2 data-i18n="hobbies_title">興趣與愛好</h2>
+            <ul class="hobbies-list">
+                <li><i class="fas fa-drumstick-bite"></i> <span data-i18n="hobby_1">跳舞</span></li>
+                <li><i class="fas fa-paint-brush"></i> <span data-i18n="hobby_2">畫畫</span></li>
+                <li><i class="fas fa-mountain"></i> <span data-i18n="hobby_3">爬山</span></li>
+                <li><i class="fas fa-water"></i> <span data-i18n="hobby_4">看海</span></li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2 data-i18n="about_me_title">關於我</h2>
+            <p data-i18n="about_me_content_1">我是一個充滿熱情與好奇心的人，喜歡透過藝術和運動來探索世界和表達自我。在異國求學雖然充滿挑戰，但也讓我學會獨立、適應新環境和欣賞不同文化。</p>
+            <p data-i18n="about_me_content_2">希望未來能將所學應用於實踐，並持續精進自己的專業技能。我樂於接受新事物，相信積極的態度能帶來無限的可能。</p>
+        </section>
+
+        <section class="section">
+            <h2 data-i18n="gallery_title">生活點滴</h2>
+            <div class="gallery">
+                <img src="images/photo1.jpg" alt="生活照 1" loading="lazy">
+                <img src="images/photo2.jpg" alt="生活照 2" loading="lazy">
+                </div>
+            <p data-i18n="gallery_caption">這是我的部分生活照片。請將此處的佔位圖片替換成您在越南或台灣的生活照！</p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 冒文進. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
