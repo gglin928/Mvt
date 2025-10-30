@@ -4,7 +4,7 @@ const translations = {
         title: "個人履歷 - 冒文進",
         name: "冒文進 (Mào Văn Tiến)",
         student_id_label: "學號:",
-        current_status: "來自越南的留學生，目前就讀亞洲科技大學 (Asia University of Science and Technology) 於台中。",
+        current_status: "來自越南的留學生，目前就讀台中的亞洲大學 (Asia University)",
         hobbies_title: "興趣與愛好",
         hobby_1: "跳舞",
         hobby_2: "畫畫",
@@ -23,7 +23,7 @@ const translations = {
         title: "Sơ Yếu Lý Lịch - Mão Văn Tiến",
         name: "冒文進 (Mào Văn Tiến)",
         student_id_label: "Mã số sinh viên:",
-        current_status: "Du học sinh đến từ Việt Nam, hiện đang theo học tại Đại học Khoa học và Công nghệ Châu Á (Asia University of Science and Technology) ở Đài Trung.",
+        current_status: "Du học sinh đến từ Việt Nam, hiện đang theo học tại Đại học Châu Á (Asia University) ở Đài Trung.",
         hobbies_title: "Sở Thích & Hoạt Động",
         hobby_1: "Nhảy múa (Dance)",
         hobby_2: "Vẽ tranh (Drawing)",
@@ -58,8 +58,8 @@ const milestones = [
     },
     {
         date: "2025/09",
-        zh: "就讀大學一年級 (亞洲科技大學)",
-        vi: "Bắt đầu năm thứ nhất đại học (Asia University of Science and Technology)"
+        zh: "就讀大學一年級 (亞洲大學)",
+        vi: "Bắt đầu năm thứ nhất đại học (Asia University)"
     }
 ];
 
