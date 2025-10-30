@@ -1,47 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Noto+Sans+TC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Noto+Sans+TC:wght=400;700&display=swap');
 
-/* --- 顏色變數：柔和可愛風格 --- */
+/* --- 顏色變數：清新活潑的薄荷綠與亮黃色 --- */
 :root {
-    /* 亮色主題預設變數 (使用柔和的粉彩色系) */
-    --background-color: #fce4ec; /* 淺粉色背景 */
-    --text-color: #4a4a4a;       /* 深灰色文字 */
-    --primary-color: #ff80ab;    /* 亮粉色 (主色調) */
-    --secondary-color: #880e4f;   /* 深粉色 (強調色) */
+    /* 亮色主題預設變數 */
+    --background-color: #e8f5e9; /* 淺薄荷綠背景 (Mint Cream) */
+    --text-color: #384e3a;       /* 深森林綠文字 */
+    --primary-color: #4CAF50;    /* 鮮豔綠色 (Primary Green) */
+    --secondary-color: #FFEB3B;   /* 亮黃色/檸檬黃 (Accent Yellow) */
     --card-background: #ffffff;  /* 白色卡片 */
-    --border-color: #f48fb1;     /* 柔和的邊框色 */
-    --shadow: 0 8px 20px rgba(255, 128, 171, 0.3); /* 粉色立體陰影 */
+    --border-color: #a5d6a7;     /* 柔和邊框色 */
+    --shadow: 0 8px 20px rgba(76, 175, 80, 0.3); /* 綠色立體陰影 */
     --font-heading: 'Fredoka', cursive; /* 活潑可愛字體 (標題) */
     --font-body: 'Noto Sans TC', sans-serif; /* 內文字體 */
     --border-radius: 20px;       /* 大圓角 */
 }
 
-/* 暗色主題覆蓋 (使用溫暖的深色系) */
+/* 暗色主題覆蓋 (使用深藍綠和金色) */
 html[data-theme='dark'] {
-    --background-color: #36454f; /* 炭灰色背景 */
-    --text-color: #f7f7f7;       /* 淺色文字 */
-    --primary-color: #ffecb3;    /* 奶油黃 (主色調) */
-    --secondary-color: #ffa000;   /* 橙色 (強調色) */
-    --card-background: #4a5568;  /* 深色卡片 */
-    --border-color: #7b9c9f;     /* 溫暖的邊框色 */
+    --background-color: #263238; /* 深藍綠色背景 */
+    --text-color: #e0f2f1;       /* 淺色文字 */
+    --primary-color: #81C784;    /* 淺綠色 (主色調) */
+    --secondary-color: #FFCA28;   /* 金色/琥珀色 (強調色) */
+    --card-background: #37474F;  /* 深色卡片 */
+    --border-color: #4DB6AC;     /* 邊框色 */
     --shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* 更明顯的陰影 */
 }
 
-/* --- 基本樣式 --- */
+/* --- 基本樣式 (與前一個版本相同，但套用新的變數) --- */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* 增加過渡效果讓主題切換更柔順 */
     transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease, transform 0.3s ease;
 }
 
 body {
     font-family: var(--font-body);
-    line-height: 1.8; /* 增加行高，提升閱讀舒適度 */
+    line-height: 1.8;
     background-color: var(--background-color);
     color: var(--text-color);
     min-height: 100vh;
-    padding-bottom: 50px; /* 為 footer 留白 */
+    padding-bottom: 50px;
 }
 
 .container {
@@ -58,34 +57,39 @@ body {
     padding: 15px 50px;
     background-color: var(--card-background);
     box-shadow: var(--shadow);
-    border-radius: 0 0 var(--border-radius) var(--border-radius); /* 底部圓角 */
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
 #theme-toggle, #lang-select {
     padding: 10px 15px;
-    border: none; /* 移除邊框 */
-    border-radius: 10px; /* 小圓角按鈕 */
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
-    background-color: var(--primary-color);
-    color: white; /* 白色字體 */
+    background-color: var(--primary-color); /* 使用主綠色 */
+    color: white; 
     margin-left: 15px;
     font-weight: 600;
-    box-shadow: 0 4px var(--secondary-color); /* 增加按鈕立體感 */
+    box-shadow: 0 4px #388E3C; /* 深綠色陰影，增加立體感 */
     transform: translateY(0);
 }
 
+html[data-theme='dark'] #theme-toggle, html[data-theme='dark'] #lang-select {
+    box-shadow: 0 4px #5E35B1; /* 暗色模式使用紫色調陰影 */
+}
+
 #theme-toggle:hover, #lang-select:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-2px); /* 懸停時輕微上浮 */
+    background-color: var(--secondary-color); /* 懸停時變亮黃色 */
+    color: var(--text-color); /* 讓文字變深 */
+    transform: translateY(-2px);
 }
 
 #theme-toggle:active, #lang-select:active {
-    box-shadow: 0 2px var(--secondary-color);
-    transform: translateY(2px); /* 點擊時下沉 */
+    box-shadow: 0 2px #388E3C;
+    transform: translateY(2px);
 }
 
 #theme-toggle i {
-    font-size: 1.5em; /* 放大圖示 */
+    font-size: 1.5em;
 }
 
 
@@ -97,8 +101,8 @@ body {
     box-shadow: var(--shadow);
     text-align: center;
     margin-bottom: 40px;
-    border: 3px solid var(--border-color); /* 增加邊框增加質感 */
-    animation: fadeIn 1s ease-out; /* 增加載入動畫 */
+    border: 3px solid var(--border-color);
+    animation: fadeIn 1s ease-out;
 }
 
 @keyframes fadeIn {
@@ -112,13 +116,13 @@ body {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
-    border: 6px solid var(--primary-color); /* 更粗的邊框 */
+    border: 6px solid var(--primary-color);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .profile-card h1 {
     font-family: var(--font-heading);
-    color: var(--secondary-color);
+    color: var(--primary-color); /* 標題使用主綠色 */
     font-size: 2.5em;
     margin-bottom: 10px;
 }
@@ -129,29 +133,33 @@ body {
     align-items: center;
     justify-content: center;
     margin: 15px 0;
-    background-color: rgba(255, 128, 171, 0.1); /* 淺粉色背景 */
+    background-color: #f1f8e9; /* 淺淺的綠色背景 */
     padding: 8px 15px;
     border-radius: 10px;
     border: 1px dashed var(--primary-color);
 }
 
+html[data-theme='dark'] .student-id {
+    background-color: #455A64;
+}
+
 #copy-id-btn {
     background: none;
     border: none;
-    color: var(--primary-color);
+    color: var(--secondary-color); /* 使用亮黃色圖示 */
     cursor: pointer;
     margin-left: 10px;
     font-size: 1.2em;
 }
 
 #copy-id-btn:hover {
-    color: var(--secondary-color);
-    transform: scale(1.1); /* 懸停時放大 */
+    color: var(--primary-color);
+    transform: scale(1.1);
 }
 
 .copy-message {
     margin-left: 10px;
-    color: green;
+    color: #4CAF50; /* 成功的綠色 */
     font-weight: bold;
     font-size: 1em;
     opacity: 0;
@@ -173,7 +181,7 @@ body {
 
 .section h2 {
     font-family: var(--font-heading);
-    border-bottom: 3px dashed var(--primary-color); /* 虛線邊框更可愛 */
+    border-bottom: 3px dashed var(--secondary-color); /* 虛線使用亮黃色 */
     padding-bottom: 10px;
     margin-bottom: 20px;
     color: var(--primary-color);
@@ -186,7 +194,7 @@ body {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* 置中排列 */
+    justify-content: center;
     gap: 30px;
 }
 
@@ -203,13 +211,13 @@ body {
 }
 
 .hobbies-list li:hover {
-    transform: rotate(-5deg) scale(1.05); /* 懸停時傾斜和放大 */
+    transform: rotate(-5deg) scale(1.05);
     background-color: var(--primary-color);
     color: white;
 }
 
 .hobbies-list i {
-    color: var(--secondary-color);
+    color: var(--secondary-color); /* 圖示使用亮黃色強調 */
     margin-right: 10px;
     font-size: 1.2em;
 }
@@ -235,11 +243,11 @@ body {
     border-radius: 15px;
     box-shadow: var(--shadow);
     filter: brightness(0.95);
-    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55), filter 0.3s; /* 增加彈跳效果 */
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55), filter 0.3s;
 }
 
 .gallery img:hover {
-    transform: scale(1.08) rotate(3deg); /* 懸停時放大並輕微旋轉 */
+    transform: scale(1.08) rotate(3deg);
     filter: brightness(1);
     z-index: 10;
 }
@@ -257,6 +265,6 @@ body {
     padding: 20px;
     background-color: var(--card-background);
     border-top: 5px solid var(--primary-color);
-    color: var(--secondary-color);
+    color: var(--text-color);
     font-weight: 600;
 }
