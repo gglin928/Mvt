@@ -268,3 +268,118 @@ html[data-theme='dark'] .student-id {
     color: var(--text-color);
     font-weight: 600;
 }
+/* --- 大事紀錄 (Timeline) 樣式 --- */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+    margin-top: 10px;
+}
+
+/* 時間軸垂直線 */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    margin-left: -2px;
+    background-color: var(--border-color); /* 清新綠色線條 */
+    border-radius: 4px;
+}
+
+/* 單個紀錄項目 */
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 10px 40px;
+    margin-bottom: 30px;
+}
+
+/* 左側項目 */
+.timeline-item:nth-child(odd) {
+    left: 0;
+    padding-right: 60px;
+    text-align: right;
+}
+
+/* 右側項目 */
+.timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: 60px;
+    text-align: left;
+}
+
+/* 時間軸上的小圓點 (標記) */
+.timeline-marker {
+    position: absolute;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--secondary-color); /* 亮黃色圓點 */
+    border: 3px solid var(--card-background);
+    z-index: 1;
+    box-shadow: 0 0 0 3px var(--primary-color); /* 綠色外框 */
+}
+
+/* 圓點定位 */
+.timeline-item:nth-child(odd) .timeline-marker {
+    right: -10px;
+}
+
+.timeline-item:nth-child(even) .timeline-marker {
+    left: -10px;
+}
+
+/* 內容卡片 */
+.timeline-content {
+    background-color: var(--card-background);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px); /* 懸停上浮 */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    font-family: var(--font-heading);
+}
+
+.timeline-description {
+    color: var(--text-color);
+    font-size: 1em;
+}
+
+/* 手機版優化：時間軸居中對齊 */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px; /* 將線條移到左邊 */
+    }
+
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 60px;
+        padding-right: 20px;
+        margin-bottom: 25px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-marker,
+    .timeline-item:nth-child(even) .timeline-marker {
+        left: 10px; /* 將所有圓點對齊左邊線條 */
+        right: auto;
+    }
+
+    .timeline-item:nth-child(odd) {
+        text-align: left;
+    }
+}

@@ -16,7 +16,8 @@ const translations = {
         gallery_title: "生活點滴",
         gallery_caption: "這是我的部分生活照片。",
         copy_success: "已複製！",
-        copy_label: "複製學號"
+        copy_label: "複製學號",
+        milestones_title: "大事紀錄 (里程碑)"
     },
     vi: {
         title: "Sơ Yếu Lý Lịch - Mão Văn Tiến",
@@ -34,9 +35,33 @@ const translations = {
         gallery_title: "Khoảnh Khắc Đời Thường",
         gallery_caption: "Đây là một số hình ảnh về cuộc sống của tôi.",
         copy_success: "Đã sao chép!",
-        copy_label: "Sao chép Mã SV"
+        copy_label: "Sao chép Mã SV",
+        milestones_title: "Các Mốc Quan Trọng (Timeline)"
     }
 };
+
+const milestones = [
+    {
+        date: "2024/09",
+        zh: "來到台灣，學習中文",
+        vi: "Đến Đài Loan, bắt đầu học tiếng Trung"
+    },
+    {
+        date: "2025/02",
+        zh: "取得中文 B1 認證",
+        vi: "Đạt chứng chỉ Hán ngữ B1"
+    },
+    {
+        date: "2025/04",
+        zh: "在牛排店任職 (兼職)",
+        vi: "Bắt đầu làm việc (bán thời gian) tại một nhà hàng bít tết"
+    },
+    {
+        date: "2025/09",
+        zh: "就讀大學一年級 (亞洲科技大學)",
+        vi: "Bắt đầu năm thứ nhất đại học (Asia University of Science and Technology)"
+    }
+];
 
 // --- DOM 元素獲取 ---
 const htmlElement = document.documentElement;
@@ -104,6 +129,34 @@ function applyTranslation(lang) {
 
     // 儲存語言偏好
     localStorage.setItem('lang', lang);
+
+    // === 新增：渲染大事紀錄 (Render Timeline) ===
+    renderTimeline(lang);
+}
+
+// --- 大事紀錄渲染功能 (Timeline Rendering) ---
+function renderTimeline(lang) {
+    const container = document.getElementById('timeline-container');
+    if (!container) return; // 如果找不到容器則退出
+
+    container.innerHTML = ''; // 清空舊內容
+
+    milestones.forEach(item => {
+        const itemElement = document.createElement('div');
+        itemElement.classList.add('timeline-item');
+        
+        // 根據當前語言選擇描述
+        const description = item[lang] || item['zh']; 
+
+        itemElement.innerHTML = `
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+                <div class="timeline-date">${item.date}</div>
+                <div class="timeline-description">${description}</div>
+            </div>
+        `;
+        container.appendChild(itemElement);
+    });
 }
 
 // 2. 監聽語言選單變化
