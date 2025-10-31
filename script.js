@@ -47,11 +47,6 @@ const milestones = [
         vi: "Đến Đài Loan, bắt đầu học tiếng Trung"
     },
     {
-        date: "2025/02",
-        zh: "取得中文 B1 認證",
-        vi: "Đạt chứng chỉ Hán ngữ B1"
-    },
-    {
         date: "2025/04",
         zh: "在牛排店任職 (兼職)",
         vi: "Bắt đầu làm việc (bán thời gian) tại một nhà hàng bít tết"
